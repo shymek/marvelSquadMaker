@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Marvel Squad</string>
+
+    <!--    CharactersListFragment-->
+    <string name="characters_title">Superhero Squad Maker</string>
+    <string name="cd_character_avatar">character avatar</string>
+    <string name="label_my_squad">My Squad</string>
+    <string name="error_loading_characters">Could not fetch characters</string>
+    <string name="error_loading_squad">Could not load your squad</string>
+    <string name="label_no_characters">No characters to show :(</string>
+
+    <!--    CharacterDetailsFragment-->
+    <string name="button_hire">💪 Hire to Squad</string>
+    <string name="button_fire">🔥 Fire from Squad</string>
+    <string name="cd_comic_thumbnail">comic thumbnail</string>
+    <string name="label_last_appeared_in">Last appeared in</string>
+    <string name="no_comics_label">No comics data for this character :(</string>
+    <string name="error_loading_comics">Could not load comics</string>
+    <string name="error_updating_squad">Could not update squad</string>
+    <plurals name="label_other_comics">
+        <item quantity="one">and %d other comic</item>
+        <item quantity="other">and %d other comics</item>
+    </plurals>
+</resources>

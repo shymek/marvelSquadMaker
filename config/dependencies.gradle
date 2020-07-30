@@ -1,0 +1,66 @@
+ext {
+    //Libraries
+    androidXVersion = '1.3.0'
+    appCompatVersion = '1.1.0'
+    constraintLayoutVersion = '1.1.3'
+    koinVersion = '2.1.3'
+    navigationVersion = '2.3.0'
+    retrofitVersion = '2.9.0'
+    retrofitGsonVersion = '2.9.0'
+    loggingInterceptorVersion = '4.8.0'
+    lastAdapterVersion = '2.3.0'
+    glideVersion = '4.11.0'
+    infiniteScrollVersion = '0.0.3'
+    extensionsVersion = '2.1.0'
+    roomVersion = '2.2.5'
+    materialComponentsVersion = '1.1.0'
+    jodaTimeVersion = '2.10.6'
+    swipeRefreshLayoutVersion = '1.1.0'
+    fixturesVersion = '0.9.4'
+    coroutinesTestVersion = '1.3.8'
+    liveDataScopeVersion = '2.2.0-alpha01'
+
+    //Test
+    junitVersion = '4.13'
+    junitExtensionVersion = '1.1.1'
+    espressoVersion = '3.2.0'
+    mockitoVersion = '2.7.13'
+    mockitoKotlinVersion = '2.2.0'
+
+    appDependencies = [
+            kotlin            : "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
+            ktx               : "androidx.core:core-ktx:${androidXVersion}",
+            appCompat         : "androidx.appcompat:appcompat:${appCompatVersion}",
+            constraintLayout  : "androidx.constraintlayout:constraintlayout:${constraintLayoutVersion}",
+            koin              : "org.koin:koin-android:${koinVersion}",
+            koinViewModel     : "org.koin:koin-androidx-viewmodel:${koinVersion}",
+            navigationFragment: "androidx.navigation:navigation-fragment-ktx:${navigationVersion}",
+            navigationUi      : "androidx.navigation:navigation-ui-ktx:${navigationVersion}",
+            retrofit          : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            retrofitGson      : "com.squareup.retrofit2:converter-gson:${retrofitGsonVersion}",
+            loggingInterceptor: "com.squareup.okhttp3:logging-interceptor:${loggingInterceptorVersion}",
+            lastAdapter       : "com.github.nitrico.lastadapter:lastadapter:${lastAdapterVersion}",
+            glide             : "com.github.bumptech.glide:glide:${glideVersion}",
+            glideProcessor    : "com.github.bumptech.glide:compiler:${glideVersion}",
+            infiniteScroll    : "com.github.pwittchen:infinitescroll:${infiniteScrollVersion}",
+            roomRuntime       : "androidx.room:room-runtime:${roomVersion}",
+            roomCompiler      : "androidx.room:room-compiler:${roomVersion}",
+            roomKtx           : "androidx.room:room-ktx:${roomVersion}",
+            materialComponents: "com.google.android.material:material:${materialComponentsVersion}",
+            jodaTime          : "joda-time:joda-time:${jodaTimeVersion}",
+            swipeRefreshLayout: "androidx.swiperefreshlayout:swiperefreshlayout:${swipeRefreshLayoutVersion}",
+            liveDataScope     : "androidx.lifecycle:lifecycle-livedata-ktx:${liveDataScopeVersion}"
+    ]
+
+    appTestDependencies = [
+            junit              : "junit:junit:${junitVersion}",
+            junitExt           : "androidx.test.ext:junit:${junitExtensionVersion}",
+            espresso           : "androidx.test.espresso:espresso-core:${espressoVersion}",
+            mockito            : "org.mockito:mockito-inline:${mockitoVersion}",
+            mockitoKotlin      : "com.nhaarman.mockitokotlin2:mockito-kotlin:${mockitoKotlinVersion}",
+            architectureTesting: "androidx.arch.core:core-testing:${extensionsVersion}",
+            roomTesting        : "android.arch.persistence.room:testing:${roomVersion}",
+            fixtures           : "com.appmattus.fixture:fixture:${fixturesVersion}",
+            coroutinesTest     : "org.jetbrains.kotlinx:kotlinx-coroutines-test:${coroutinesTestVersion}"
+    ]
+}

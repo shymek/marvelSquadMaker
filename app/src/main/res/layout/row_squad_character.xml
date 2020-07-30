@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="character"
+            type="pl.jsm.marvelsquad.data.Character" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="@dimen/avatar_size_big"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_xsmall"
+        android:layout_marginEnd="@dimen/padding_xsmall"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/characterAvatar"
+            android:layout_width="@dimen/avatar_size_big"
+            android:layout_height="@dimen/avatar_size_big"
+            android:contentDescription="@string/cd_character_avatar"
+            app:characterAvatar="@{character.thumbnailUrl}"
+            tools:src="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/characterName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@{character.name}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            tools:text="Absorbing Man" />
+
+    </LinearLayout>
+
+</layout>

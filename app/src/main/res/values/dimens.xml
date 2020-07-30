@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_default">16dp</dimen>
+    <dimen name="padding_xsmall">4dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">12dp</dimen>
+    <dimen name="list_item_text_size">18sp</dimen>
+    <dimen name="text_size_title">48sp</dimen>
+    <dimen name="button_text_size">20sp</dimen>
+    <dimen name="character_details_image_height">360dp</dimen>
+    <dimen name="description">16sp</dimen>
+    <dimen name="line_spacing_description">12dp</dimen>
+    <dimen name="default_margin_top">32dp</dimen>
+    <dimen name="button_height">60dp</dimen>
+    <dimen name="heading_size_small">20sp</dimen>
+    <dimen name="avatar_size">42dp</dimen>
+    <dimen name="avatar_size_big">64dp</dimen>
+    <dimen name="padding_character_header">44dp</dimen>
+</resources>

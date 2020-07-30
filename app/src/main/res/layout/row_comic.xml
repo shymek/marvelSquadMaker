@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="comic"
+            type="pl.jsm.marvelsquad.data.Comic" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/comicRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_small"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/cd_comic_thumbnail"
+            app:imageUrl="@{comic.thumbnailUrl}"
+            tools:src="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/comicName"
+            style="@style/AppTheme.DescriptionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@{comic.title}"
+            tools:text="Hulk (2008) #55" />
+
+    </LinearLayout>
+</layout>

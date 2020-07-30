@@ -1,0 +1,82 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.1"
+
+    defaultConfig {
+        applicationId "pl.jsm.marvelsquad"
+        minSdkVersion 24
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField 'String', 'API_BASE_URL', quote("https://gateway.marvel.com:443")
+        buildConfigField 'String', 'API_KEY', quote("428da83ad3380e625940e54df09c274b")
+        buildConfigField 'String', 'API_PRIVATE_KEY', quote("b8df41d3d7c9d412da924c0f01d6b00bea235366")
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        dataBinding = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+}
+
+static String quote(final String input) {
+    return "\"" + input + "\""
+}
+
+dependencies {
+    def dependencies = rootProject.ext.appDependencies
+    def testDependencies = rootProject.ext.appTestDependencies
+
+    implementation dependencies.kotlin
+
+    implementation dependencies.ktx
+    implementation dependencies.appCompat
+    implementation dependencies.constraintLayout
+    implementation dependencies.koin
+    implementation dependencies.navigationFragment
+    implementation dependencies.navigationUi
+    implementation dependencies.koinViewModel
+    implementation dependencies.retrofit
+    implementation dependencies.retrofitGson
+    implementation dependencies.loggingInterceptor
+    implementation dependencies.lastAdapter
+    implementation dependencies.glide
+    implementation dependencies.infiniteScroll
+    kapt dependencies.glideProcessor
+    implementation dependencies.roomRuntime
+    kapt dependencies.roomCompiler
+    implementation dependencies.roomKtx
+    implementation dependencies.materialComponents
+    implementation dependencies.jodaTime
+    implementation dependencies.swipeRefreshLayout
+    implementation dependencies.liveDataScope
+
+    testImplementation testDependencies.junit
+    androidTestImplementation testDependencies.junitExt
+    testImplementation testDependencies.mockito
+    testImplementation testDependencies.mockitoKotlin
+    testImplementation testDependencies.architectureTesting
+    testImplementation testDependencies.roomTesting
+    testImplementation testDependencies.fixtures
+    testImplementation testDependencies.coroutinesTest
+}
